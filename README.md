@@ -35,8 +35,10 @@ Edit this document to include your answers after each question. Make sure to lea
 3. What is an event listener?
 
 4. Why would we convert a NodeList into an Array?
+Converting a nodelist into an array allows us to implement certain array methods like map, forEach, filter, reduce etc.
 
 5. What is a component?
+A component is a broken down piece of code that can be reused. With a component, we can keep our code DRY (DO not Repeat Yourself).
 
 ### Git Set up
 
