@@ -7,3 +7,28 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+function Tab() {
+  // CREATE HTML MARKUP
+  const tabTitle = document.createElement("div");
+
+  // CREATE CLASSES
+  tabTitle.classList.add(tab);
+
+  tabTitle.addEventListener(`click`, (event)=>{
+    tabTitle.classList.toggle('.active-tab')
+
+  })
+
+  return tabTitle;
+}
+
+axios
+  .get("https://lambda-times-backend.herokuapp.com/topics")
+  .then(response => {
+      console.log(response.data);
+      
+      
+    
+  })
+  .catch();
