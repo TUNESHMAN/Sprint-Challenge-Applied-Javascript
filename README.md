@@ -29,10 +29,13 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
+The Document Object Model (DOM), is an object representation of the HTML elements on a webpage. It provides an interface through which we can manipulate the page.
 
 2. What is an event?
+Events provide a platform through which javascript interact with HTML.
 
 3. What is an event listener?
+As the name implies, event listeners help us listen to things that happen to HTML elements.
 
 4. Why would we convert a NodeList into an Array?
 Converting a nodelist into an array allows us to implement certain array methods like map, forEach, filter, reduce etc.

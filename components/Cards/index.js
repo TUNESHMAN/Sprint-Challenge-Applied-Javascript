@@ -18,7 +18,48 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
-function Article() {
-    // CREATE HTML MARKUP
-    
+function Article(headline, authorPhoto, authorName) {
+  // CREATE HTML MARKUP
+  const articleDiv = document.createElement("div");
+  const articleDiv2 = document.createElement("div");
+  const articleDiv3 = document.createElement("div");
+  const articleDiv4 = document.createElement("div");
+  const articleImage = document.createElement("img");
+  const articleSpan = document.createElement("span");
+
+  //   DEFINE HTML MARKUP
+  articleDiv.append(articleDiv2);
+  articleDiv.append(articleDiv2);
+  articleDiv3.append(articleDiv4);
+  articleDiv4.append(articleImage);
+  articleDiv3.append(articleSpan);
+
+//   ADD CLASSES
+articleDiv.classList.add('card');
+articleDiv2.classList.add('headline');
+articleDiv3.classList.add('author');
+articleDiv4.classList.add('img-container');
+
+// ADD CONTENT
+articleDiv2.textContent = obj.headline;
+articleImage.src = obj.authorPhoto;
+articleSpan.textContent = obj.authorName;
+
+
+
+  return articleDiv;
 }
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+.then((reply)=>{
+    console.log(reply.data.articles);
+    
+    let cards = reply.data.articles;
+
+    cards.forEach(element => {
+        bodyText.append(element.headline)
+    });
+    
+
+})
+.catch()
