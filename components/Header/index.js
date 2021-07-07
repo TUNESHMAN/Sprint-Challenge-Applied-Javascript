@@ -9,4 +9,31 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+function Header() {
+  // CREATE HTML MARKUP
+  const headerDiv = document.createElement("div");
+  const headerSpan = document.createElement("span");
+  const headerTitle = document.createElement("h1");
+  const secondSpan = document.createElement("span");
+
+  // DEFINE HTML MARKUP
+  headerDiv.append(headerSpan);
+  headerDiv.append(headerTitle);
+  headerDiv.append(secondSpan);
+
+  // CREATE CLASSES
+  headerDiv.classList.add("header");
+  headerSpan.classList.add("date");
+  secondSpan.classList.add("temp");
+
+//   ADD CONTENT
+headerSpan.textContent = `MARCH 28, 2019`;
+headerTitle.textContent = `Lambda Times`;
+secondSpan.textContent = `98°`;
+
+  return headerDiv;
+}
+
+// ADD TO THE DOM
+const bodyText = document.querySelector('.header-container');
+bodyText.append(Header());
